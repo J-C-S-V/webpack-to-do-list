@@ -4,7 +4,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js', // Define your entry point
   output: {
-    filename: 'bundle.js', // Define your output file
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
@@ -19,6 +18,14 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader', // creates style nodes from JS strings
+          'css-loader', // translates CSS into CommonJS
+          'sass-loader', // compiles Sass to CSS
+        ],
+      },
     ],
   },
   plugins: [
@@ -27,7 +34,4 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
-  stats: {
-    children: true,
-  },
 };
