@@ -1,5 +1,37 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background-color: magenta;
-  background-color: teal;
-  background-color: tomato;
+  font-size: 2rem;
+  background-color: #f6f6f6;
+}
+
+.main {
+  margin: 50% 15%;
+  background-color: white;
+  border: 1px solid grey;
+  padding: 2rem;
+  box-shadow: 1px 18px 13px 1px rgba(0, 0, 0, 0.3);
+}
+
+.list {
+  list-style: none;
+}
+
+.ul_li {
+  border: 1px solid grey;
+}
+
+.main__anchor {
+  text-align: center;
+  background-color: rgb(187, 187, 187);
 }
