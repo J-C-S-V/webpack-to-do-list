@@ -15,15 +15,15 @@ export default function addTasks() {
   const li = document.createElement('li');
   li.innerHTML = tasks[tasks.length - 1].description;
   li.setAttribute('id', tasks.length);
+  li.classList.add('list__item');
   ul.appendChild(li);
 
   const removeButton = document.createElement('button');
   removeButton.innerHTML = 'Remove';
   removeButton.classList.add('remove-button');
   li.appendChild(removeButton);
-  console.log('this is the value', input.value);
-  console.log('this is the value', tasks);
-
-  // const removeButton = document.querySelector('.remove-button');
+  // console.log('this is the value', input.value);
+  // console.log('this is the value', tasks);
+  input.value = '';
   removeButton.addEventListener('click', removeTasks);
 }
