@@ -1,6 +1,10 @@
-const tasks = [];
+import removeTasks from './removeTasks.js';
+
+export const tasks = [];
 
 const input = document.querySelector('.main__input');
+const ul = document.querySelector('.list');
+
 export default function addTasks() {
   tasks.push({
     description: input.value,
@@ -8,21 +12,18 @@ export default function addTasks() {
     index: tasks.length + 1,
   });
 
+  const li = document.createElement('li');
+  li.innerHTML = tasks[tasks.length - 1].description;
+  li.setAttribute('id', tasks.length);
+  ul.appendChild(li);
+
+  const removeButton = document.createElement('button');
+  removeButton.innerHTML = 'Remove';
+  removeButton.classList.add('remove-button');
+  li.appendChild(removeButton);
   console.log('this is the value', input.value);
   console.log('this is the value', tasks);
+
+  // const removeButton = document.querySelector('.remove-button');
+  removeButton.addEventListener('click', removeTasks);
 }
-
-// console.log("this is the length",tasks.length);
-
-// export default function addTasks(tasks) {
-//   const ul = document.querySelector('.list');
-//   const tasksList = () => {
-//     tasks.forEach((element) => {
-//       const li = document.createElement('li');
-//       li.innerHTML = element.description;
-//       li.classList.add('main__elements');
-//       ul.appendChild(li);
-//     });
-//   };
-
-// }
