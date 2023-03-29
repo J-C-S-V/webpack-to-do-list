@@ -1,4 +1,4 @@
-export default function removeTasks(event) {
+export function removeTasks(event) {
   event.stopPropagation();
   event.target.parentNode.remove();
 }

@@ -1,6 +1,6 @@
-import removeTasks from './removeTasks.js';
-
-export const tasks = [];
+import { removeTasks } from './removeTasks.js';
+import { editTasks } from './editTasks.js';
+const tasks = [];
 
 const input = document.querySelector('.main__input');
 const ul = document.querySelector('.list');
@@ -22,8 +22,7 @@ export default function addTasks() {
   removeButton.innerHTML = 'Remove';
   removeButton.classList.add('remove-button');
   li.appendChild(removeButton);
-  // console.log('this is the value', input.value);
-  // console.log('this is the value', tasks);
+  editTasks();
   input.value = '';
   removeButton.addEventListener('click', removeTasks);
 }
