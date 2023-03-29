@@ -1,14 +1,14 @@
-const tasks = [{ description: 'sleep', completed: false, index: 1 }];
+const tasks = [];
 
 const input = document.querySelector('.main__input');
 export default function addTasks() {
-  const inputValue = input.value;
   tasks.push({
-    description: `${inputValue}`,
+    description: input.value,
     completed: false,
     index: tasks.length + 1,
   });
-  console.log('this is the value', inputValue);
+
+  console.log('this is the value', input.value);
   console.log('this is the value', tasks);
 }
 
