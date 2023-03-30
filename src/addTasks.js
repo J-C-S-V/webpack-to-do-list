@@ -34,4 +34,7 @@ export default function addTasks() {
   editTasks(li);
 
   input.value = '';
+
+  // Add local storage
+  localStorage.setItem('tasks', JSON.stringify(tasks));
 }
