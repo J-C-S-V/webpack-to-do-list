@@ -1,12 +1,11 @@
-import  removeTasks  from './removeTasks.js';
-import  editTasks  from './editTasks.js';
+import removeTasks from './removeTasks.js';
+import editTasks from './editTasks.js';
 
 const input = document.querySelector('.main__input');
 const ul = document.querySelector('.list');
 const tasks = [];
 
 export default function addTasks() {
-  console.log(tasks);
 
   tasks.push({
     description: input.value,
