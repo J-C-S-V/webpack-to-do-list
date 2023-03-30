@@ -1,5 +1,5 @@
-import { removeTasks } from './removeTasks.js';
-import { editTasks } from './editTasks.js';
+import  removeTasks  from './removeTasks.js';
+import  editTasks  from './editTasks.js';
 
 const input = document.querySelector('.main__input');
 const ul = document.querySelector('.list');
