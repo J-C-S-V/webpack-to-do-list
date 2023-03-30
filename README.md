@@ -1,13 +1,12 @@
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <img src="https://github.com/J-C-S-V/webpack-to-do-list-/blob/add-and-remove/main_img.png" alt="logo" width="340"  height="auto" />
   <br/>
 
-  <h3><b>[/*TITLE]</b></h3>
 
 </div>
 
-# [/*TITLE]
+# [To do list]
 
 <!-- TABLE OF CONTENTS -->
 
@@ -34,9 +33,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [/*TITLE] <a name="about-project"></a>
+# 📖 [To do list] <a name="about-project"></a>
 
-**[/*TITLE]** is my first project with Microverse 😀. Here we'll see a very basic web page using the standards of the industry 💻
+**[To do list]** is my project to keep track of your daily tasks 😀.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -51,7 +50,7 @@
     <li><a href="#">CSS3</a></li>
   </ul>
     <ul>
-    <li><a href="#">VScode</a></li>
+    <li><a href="#">JavaScript</a></li>
   </ul>
     <ul>
     <li><a href="#">Git and GitHub</a></li>
@@ -64,7 +63,7 @@
 
 - **[Easy navigation]**
 - **[Personalized product]**
-- **[Secure payment processing]**
+- **[Mobile first]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -72,7 +71,9 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://j-c-s-v.github.io/Portfolio-setup-and-mobile-first/)
+Not available yet
+
+<!-- - [Live Demo Link](https://j-c-s-v.github.io/Portfolio-setup-and-mobile-first/) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -85,7 +86,7 @@ To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need GitHub account and a text editor.
+To run this project use `npm start` or `npm run build`.
 
 ### Setup
 
@@ -93,7 +94,7 @@ Clone this repository to your desired folder:
 
 https
 cd my-folder
-git clone https://github.com/J-C-S-V/hello_microverse_project.git
+git clone https://github.com/J-C-S-V/webpack-to-do-list-
 
 ### Install
 
@@ -103,7 +104,7 @@ N/A
 
 ### Usage
 
-To run the project, execute the following command:
+To run the project, execute the following command: `npm start` or `npm run build`
 
 N/A
 
