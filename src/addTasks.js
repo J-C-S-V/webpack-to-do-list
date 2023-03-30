@@ -6,7 +6,6 @@ const ul = document.querySelector('.list');
 const tasks = [];
 
 export default function addTasks() {
-
   tasks.push({
     description: input.value,
     completed: false,
