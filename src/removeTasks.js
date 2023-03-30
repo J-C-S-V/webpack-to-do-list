@@ -1,6 +1,6 @@
 import { ul, tasks } from './index.js';
 
-export function removeTasks(event) {
+export default function removeTasks(event) {
   event.stopPropagation();
   const li = event.target.parentNode;
   const index = Array.prototype.indexOf.call(ul.children, li);

@@ -1,8 +1,8 @@
 import { ul, tasks } from './index.js';
-import { removeTasks } from './removeTasks';
-import { editTasks } from './editTasks';
+import removeTasks from './removeTasks';
+import editTasks from './editTasks';
 
-export function addTasks() {
+export default function addTasks() {
   tasks.push({
     description: input.value,
     completed: false,
