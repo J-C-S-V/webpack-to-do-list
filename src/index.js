@@ -2,7 +2,6 @@ import './index.scss';
 
 import addTasks from './addTasks.js';
 import removeTasks from './removeTasks.js';
-import editTasks from './editTasks.js';
 
 const addButton = document.querySelector('.main__button');
 addButton.addEventListener('click', addTasks);
@@ -10,6 +9,18 @@ addButton.addEventListener('click', addTasks);
 export const input = document.querySelector('.main__input');
 export const ul = document.querySelector('.list');
 export const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+export function editTasks(li) {
+  const taskSpan = li.querySelector('.list__item-description');
+  taskSpan.addEventListener('click', () => {
+    const newContent = prompt('Edit task');
+    if (newContent === null || newContent === '') return;
+    taskSpan.textContent = newContent;
+    const index = Array.prototype.indexOf.call(ul.children, li);
+    tasks[index].description = newContent;
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  });
+}
 
 tasks.forEach((task) => {
   const li = document.createElement('li');

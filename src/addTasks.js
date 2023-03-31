@@ -1,6 +1,6 @@
 import { tasks, input } from './data.js';
 import removeTasks from './removeTasks.js';
-import editTasks from './editTasks.js';
+import { editTasks } from './index';
 
 export const ul = document.querySelector('.list');
 
