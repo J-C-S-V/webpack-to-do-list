@@ -4,7 +4,7 @@ import { renderList, getTasks } from './index.js';
 
 const clearAllCompleted = document.querySelector('.main__anchor');
 
-export function clearCompleted() {
+export default function clearCompleted() {
   clearAllCompleted.addEventListener('click', () => {
     const tasks = getTasks();
     const updatedTasks = tasks.filter((task) => !task.completed);

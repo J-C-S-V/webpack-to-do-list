@@ -1,10 +1,10 @@
 import './index.scss';
-import { clearCompleted } from './isCompleted.js';
+import clearCompleted from './isCompleted.js';
 
 const addButton = document.querySelector('.main__button');
 const input = document.querySelector('.main__input');
 const ul = document.querySelector('.list');
-let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 // Remove tasks
 
@@ -15,7 +15,7 @@ function removeTask(event) {
   tasks.splice(index, 1);
   li.remove();
 
-  for (let i = index; i < tasks.length; i++) {
+  for (let i = index; i < tasks.length; i += 1) {
     tasks[i].index = i + 1;
   }
 
@@ -93,9 +93,6 @@ function addTask() {
 
   localStorage.setItem('tasks', JSON.stringify(tasks));
 
-  const checkbox = li.querySelector('.list__item-checkbox');
-  checkbox.addEventListener('change', isCompleted);
-
   function isCompleted() {
     if (checkbox.checked) {
       li.classList.add('completed');
@@ -106,6 +103,8 @@ function addTask() {
     }
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }
+  const checkbox = li.querySelector('.list__item-checkbox');
+  checkbox.addEventListener('change', isCompleted);
 }
 
 ul.addEventListener('click', (event) => {
