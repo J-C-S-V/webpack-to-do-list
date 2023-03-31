@@ -13,7 +13,7 @@ function removeTasks(event) {
   tasks.splice(index, 1);
   li.remove();
 
-  for (let i = index; i < tasks.length; i++) {
+  for (let i = index; i < tasks.length; i += 1) {
     tasks[i].index = i + 1;
   }
 
