@@ -12,6 +12,11 @@ function removeTasks(event) {
   const index = Array.prototype.indexOf.call(ul.children, li);
   tasks.splice(index, 1);
   li.remove();
+
+  for (let i = index; i < tasks.length; i++) {
+    tasks[i].index = i + 1;
+  }
+
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
