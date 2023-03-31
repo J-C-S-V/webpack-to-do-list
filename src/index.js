@@ -1,4 +1,5 @@
 import './index.scss';
+import isCompleted from './isCompleted.js';
 
 const addButton = document.querySelector('.main__button');
 
@@ -36,6 +37,12 @@ tasks.forEach((task) => {
   const li = document.createElement('li');
   li.classList.add('list__item');
   ul.appendChild(li);
+
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  checkbox.classList.add('list__item-checkbox');
+  checkbox.checked = task.completed;
+  li.appendChild(checkbox);
 
   const taskSpan = document.createElement('span');
   taskSpan.classList.add('list__item-description');
