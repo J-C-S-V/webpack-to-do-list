@@ -93,6 +93,9 @@ function addTask() {
 
   localStorage.setItem('tasks', JSON.stringify(tasks));
 
+  const checkbox = li.querySelector('.list__item-checkbox');
+  checkbox.addEventListener('change', isCompleted);
+
   function isCompleted() {
     if (checkbox.checked) {
       li.classList.add('completed');
@@ -103,8 +106,6 @@ function addTask() {
     }
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }
-  const checkbox = li.querySelector('.list__item-checkbox');
-  checkbox.addEventListener('change', isCompleted);
 }
 
 ul.addEventListener('click', (event) => {
