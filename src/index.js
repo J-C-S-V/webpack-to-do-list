@@ -5,7 +5,28 @@ addButton.addEventListener('click', addTasks);
 
 const input = document.querySelector('.main__input');
 const ul = document.querySelector('.list');
-let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+function removeTasks(event) {
+  event.stopPropagation();
+  const li = event.target.parentNode;
+  const index = Array.prototype.indexOf.call(ul.children, li);
+  tasks.splice(index, 1);
+  li.remove();
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+function editTasks(li) {
+  const taskSpan = li.querySelector('.list__item-description');
+  taskSpan.addEventListener('click', () => {
+    const newContent = prompt('Edit task');
+    if (newContent === null || newContent === '') return;
+    taskSpan.textContent = newContent;
+    const index = Array.prototype.indexOf.call(ul.children, li);
+    tasks[index].description = newContent;
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  });
+}
 
 tasks.forEach((task) => {
   const li = document.createElement('li');
@@ -53,25 +74,4 @@ function addTasks() {
   input.value = '';
 
   localStorage.setItem('tasks', JSON.stringify(tasks));
-}
-
-function removeTasks(event) {
-  event.stopPropagation();
-  const li = event.target.parentNode;
-  const index = Array.prototype.indexOf.call(ul.children, li);
-  tasks.splice(index, 1);
-  li.remove();
-  localStorage.setItem('tasks', JSON.stringify(tasks));
-}
-
-function editTasks(li) {
-  const taskSpan = li.querySelector('.list__item-description');
-  taskSpan.addEventListener('click', () => {
-    const newContent = prompt('Edit task');
-    if (newContent === null || newContent === '') return;
-    taskSpan.textContent = newContent;
-    const index = Array.prototype.indexOf.call(ul.children, li);
-    tasks[index].description = newContent;
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-  });
 }
