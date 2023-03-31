@@ -1,4 +1,6 @@
-import { ul, tasks } from './data.js';
+import { tasks } from './index.js';
+
+export const ul = document.querySelector('.list');
 
 export default function removeTasks(event) {
   event.stopPropagation();
