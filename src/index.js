@@ -4,6 +4,7 @@ import addTasks from './addTasks.js';
 import removeTasks from './removeTasks.js';
 import editTasks from './editTasks.js';
 
+// eslint-disable-next-line import/no-cycle
 const addButton = document.querySelector('.main__button');
 addButton.addEventListener('click', addTasks);
 

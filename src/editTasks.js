@@ -1,5 +1,6 @@
 import { ul, tasks } from './index.js';
 
+// eslint-disable-next-line import/no-cycle
 export default function editTasks(li) {
   const taskSpan = li.querySelector('.list__item-description');
   taskSpan.addEventListener('click', () => {

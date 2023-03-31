@@ -2,6 +2,7 @@ import { tasks, input } from './index.js';
 import removeTasks from './removeTasks.js';
 import editTasks from './editTasks.js';
 
+// eslint-disable-next-line import/no-cycle
 export const ul = document.querySelector('.list');
 
 export default function addTasks() {
