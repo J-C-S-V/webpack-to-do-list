@@ -1,4 +1,5 @@
 import './index.scss';
+import { clearCompleted } from './isCompleted.js';
 
 const addButton = document.querySelector('.main__button');
 const input = document.querySelector('.main__input');
@@ -62,7 +63,7 @@ function createListItem(task) {
 
 // Render tasks
 
-function renderList() {
+export function renderList() {
   ul.innerHTML = '';
   const incompleteTasks = tasks.filter((task) => !task.completed);
   incompleteTasks.forEach((task) => {
@@ -107,16 +108,6 @@ function addTask() {
   }
 }
 
-// Clear all completed tasks
-
-const clearAllCompleted = document.querySelector('.main__anchor');
-clearAllCompleted.addEventListener('click', () => {
-  tasks = tasks.filter((task) => !task.completed);
-  localStorage.setItem('tasks', JSON.stringify(tasks));
-
-  renderList();
-});
-
 ul.addEventListener('click', (event) => {
   if (event.target.classList.contains('remove-button')) {
     removeTask(event);
@@ -126,3 +117,8 @@ ul.addEventListener('click', (event) => {
 addButton.addEventListener('click', addTask);
 
 renderList();
+clearCompleted();
+
+export function getTasks() {
+  return tasks;
+}
