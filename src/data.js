@@ -1,2 +1,2 @@
-import { tasks, input, ul } from './index.js';
-export { tasks, input, ul };
+import { tasks, ul } from './index.js';
+export { tasks, ul };

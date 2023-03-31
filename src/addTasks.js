@@ -1,8 +1,9 @@
-import { tasks, input } from './data.js';
+import { tasks } from './data.js';
 import removeTasks from './removeTasks.js';
-import { editTasks } from './index';
+import { editTasks } from './index.js';
 
 export const ul = document.querySelector('.list');
+const input = document.querySelector('.main__input');
 
 export default function addTasks() {
   tasks.push({
