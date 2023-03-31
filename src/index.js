@@ -3,7 +3,9 @@ import './index.scss';
 const addButton = document.querySelector('.main__button');
 const input = document.querySelector('.main__input');
 const ul = document.querySelector('.list');
-const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+
+// Remove tasks
 
 function removeTask(event) {
   const li = event.target.closest('li');
@@ -19,6 +21,8 @@ function removeTask(event) {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
+// Edit tasks
+
 function editTask(li) {
   const taskSpan = li.querySelector('.list__item-description');
   taskSpan.addEventListener('click', () => {
@@ -30,6 +34,8 @@ function editTask(li) {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   });
 }
+
+// Create list
 
 function createListItem(task) {
   const li = document.createElement('li');
@@ -54,14 +60,19 @@ function createListItem(task) {
   return li;
 }
 
+// Render tasks
+
 function renderList() {
   ul.innerHTML = '';
-  tasks.forEach((task) => {
+  const incompleteTasks = tasks.filter((task) => !task.completed);
+  incompleteTasks.forEach((task) => {
     const li = createListItem(task);
     ul.appendChild(li);
     editTask(li);
   });
 }
+
+// Add tasks
 
 function addTask() {
   const description = input.value.trim();
@@ -81,16 +92,30 @@ function addTask() {
 
   localStorage.setItem('tasks', JSON.stringify(tasks));
 
+  const checkbox = li.querySelector('.list__item-checkbox');
+  checkbox.addEventListener('change', isCompleted);
+
   function isCompleted() {
     if (checkbox.checked) {
       li.classList.add('completed');
+      task.completed = true;
     } else {
       li.classList.remove('completed');
+      task.completed = false;
     }
+    localStorage.setItem('tasks', JSON.stringify(tasks));
   }
-  const checkbox = document.querySelector('.list__item-checkbox');
-  checkbox.addEventListener('change', isCompleted);
 }
+
+// Clear all completed tasks
+
+const clearAllCompleted = document.querySelector('.main__anchor');
+clearAllCompleted.addEventListener('click', () => {
+  tasks = tasks.filter((task) => !task.completed);
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+
+  renderList();
+});
 
 ul.addEventListener('click', (event) => {
   if (event.target.classList.contains('remove-button')) {
