@@ -1,7 +1,6 @@
 import './index.scss';
 
 const addButton = document.querySelector('.main__button');
-addButton.addEventListener('click', addTasks);
 
 const input = document.querySelector('.main__input');
 const ul = document.querySelector('.list');
@@ -75,3 +74,4 @@ function addTasks() {
 
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
+addButton.addEventListener('click', addTasks);
