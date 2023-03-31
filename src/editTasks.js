@@ -1,4 +1,4 @@
-import { ul, tasks } from './data.js';
+import { ul, tasks } from './index.js';
 
 export default function editTasks(li) {
   const taskSpan = li.querySelector('.list__item-description');

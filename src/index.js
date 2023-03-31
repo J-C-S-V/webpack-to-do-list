@@ -8,6 +8,8 @@ const addButton = document.querySelector('.main__button');
 addButton.addEventListener('click', addTasks);
 
 export const input = document.querySelector('.main__input');
+export const ul = document.querySelector('.list');
+export const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 tasks.forEach((task) => {
   const li = document.createElement('li');

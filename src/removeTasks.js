@@ -1,4 +1,4 @@
-import { ul, tasks } from './data';
+import { ul, tasks } from './index.js';
 
 export default function removeTasks(event) {
   event.stopPropagation();
