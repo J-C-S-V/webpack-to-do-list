@@ -80,6 +80,16 @@ function addTask() {
   input.value = '';
 
   localStorage.setItem('tasks', JSON.stringify(tasks));
+
+  function isCompleted() {
+    if (checkbox.checked) {
+      li.classList.add('completed');
+    } else {
+      li.classList.remove('completed');
+    }
+  }
+  const checkbox = document.querySelector('.list__item-checkbox');
+  checkbox.addEventListener('change', isCompleted);
 }
 
 ul.addEventListener('click', (event) => {

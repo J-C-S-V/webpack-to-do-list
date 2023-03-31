@@ -12,10 +12,7 @@ html {
 
 body {
   font-size: 2rem;
-  font-family:
-    system-ui,
-    BlinkMacSystemFont,
-    'Segoe UI';
+  font-family: system-ui, BlinkMacSystemFont, 'Segoe UI';
   background-color: #2e8ae6;
 }
 
@@ -85,4 +82,8 @@ body {
   font-size: 1.5rem;
   margin: 0.2rem;
   cursor: pointer;
+}
+
+.completed {
+  text-decoration: line-through;
 }
