@@ -1,10 +1,7 @@
 import './index.scss';
 
-// eslint-disable-next-line import/no-cycle
 import addTasks from './addTasks.js';
-// eslint-disable-next-line import/no-cycle
 import removeTasks from './removeTasks.js';
-// eslint-disable-next-line import/no-cycle
 import editTasks from './editTasks.js';
 
 const addButton = document.querySelector('.main__button');

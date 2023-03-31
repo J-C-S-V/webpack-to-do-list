@@ -1,5 +1,4 @@
-// eslint-disable-next-line import/no-cycle
-import { tasks, input } from './index.js';
+import { tasks, input } from './data.js';
 import removeTasks from './removeTasks.js';
 import editTasks from './editTasks.js';
 

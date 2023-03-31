@@ -1,4 +1,2 @@
-const ul = document.querySelector('.list');
-const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
-
-export { tasks, ul };
+import { tasks, input, ul } from './index.js';
+export { tasks, input, ul };

@@ -1,5 +1,4 @@
-// eslint-disable-next-line import/no-cycle
-import { ul, tasks } from './index.js';
+import { ul, tasks } from './data.js';
 
 export default function editTasks(li) {
   const taskSpan = li.querySelector('.list__item-description');
