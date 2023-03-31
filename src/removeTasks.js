@@ -1,6 +1,6 @@
+// eslint-disable-next-line import/no-cycle
 import { ul, tasks } from './index.js';
 
-// eslint-disable-next-line import/no-cycle
 export default function removeTasks(event) {
   event.stopPropagation();
   const li = event.target.parentNode;
