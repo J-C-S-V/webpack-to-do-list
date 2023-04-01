@@ -1,6 +1,6 @@
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="https://github.com/J-C-S-V/webpack-to-do-list-/blob/add-and-remove/main_img.png" alt="logo" width="340"  height="auto" />
+  <img src="./main_img.png" alt="logo" width="340"  height="auto" />
   <br/>
 
 
@@ -71,9 +71,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-Not available yet
-
-<!-- - [Live Demo Link](https://j-c-s-v.github.io/Portfolio-setup-and-mobile-first/) -->
+- [Live Demo Link](https://j-c-s-v.github.io/webpack-to-do-list-/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
