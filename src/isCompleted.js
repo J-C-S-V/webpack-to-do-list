@@ -1,8 +1,6 @@
 // eslint-disable-next-line import/no-cycle
 import { renderList, getTasks } from './index.js';
 
-// Clear all completed tasks
-
 const clearAllCompleted = document.querySelector('.main__anchor');
 
 export default function clearCompleted() {

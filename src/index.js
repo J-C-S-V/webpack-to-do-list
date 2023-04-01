@@ -7,8 +7,6 @@ const input = document.querySelector('.main__input');
 const ul = document.querySelector('.list');
 const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
-// Remove tasks
-
 function removeTask(event) {
   const li = event.target.closest('li');
   if (!li) return;
@@ -23,8 +21,6 @@ function removeTask(event) {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-// Edit tasks
-
 function editTask(li) {
   const taskSpan = li.querySelector('.list__item-description');
   taskSpan.addEventListener('click', () => {
@@ -37,8 +33,6 @@ function editTask(li) {
   });
 }
 
-// Create list
-
 function createListItem(task) {
   const li = document.createElement('li');
   li.classList.add('list__item');
@@ -46,7 +40,6 @@ function createListItem(task) {
   const checkbox = document.createElement('input');
   checkbox.type = 'checkbox';
   checkbox.classList.add('list__item-checkbox');
-  // checkbox.checked = task.completed;
   li.appendChild(checkbox);
 
   const taskSpan = document.createElement('span');
@@ -62,8 +55,6 @@ function createListItem(task) {
   return li;
 }
 
-// Render tasks
-
 export function renderList() {
   ul.innerHTML = '';
   const incompleteTasks = tasks.filter((task) => !task.completed);
@@ -73,8 +64,6 @@ export function renderList() {
     editTask(li);
   });
 }
-
-// Add tasks
 
 function addTask() {
   const description = input.value.trim();
