@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server --open --mode development"
+    "start": "webpack-dev-server --open --mode development",
+    "deploy": "webpack --config webpack.config.prod.js && git add docs && git commit -m 'Deploy to GitHub Pages' && git push origin gh-pages"
   },
   "repository": {
     "type": "git",
