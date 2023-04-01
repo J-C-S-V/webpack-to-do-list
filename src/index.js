@@ -1,4 +1,5 @@
 import './index.scss';
+// eslint-disable-next-line import/no-cycle
 import clearCompleted from './isCompleted.js';
 
 const addButton = document.querySelector('.main__button');
