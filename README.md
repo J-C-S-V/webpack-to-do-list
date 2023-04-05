@@ -7,6 +7,7 @@
 </div>
 
 # [To do list]
+This is a project to create lists for a day, week or month. This was build using SPA (Single Page Application), JavaScript, HTML5, CSS3, mobile-first approach. local storage API and DOM manipulation.
 
 <!-- TABLE OF CONTENTS -->
 
