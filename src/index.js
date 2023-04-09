@@ -1,5 +1,7 @@
 import './index.scss';
+import { addTasks } from './addTasks.js';
 
 const addButton = document.querySelector('.main__button');
 const input = document.querySelector('.main__input');
-const ul = document.querySelector('.list');
+
+addButton.addEventListener('click', addTasks);

@@ -1,4 +1,11 @@
-function addTasks(tasks) {
+import { removeTask } from './removeTasks.js';
+const ul = document.querySelector('.main__ul');
+
+export function addTasks(event) {
+  /*What event.prevenDefault() 
+  does is prevent the default action of the event from happening.*/
+  event.preventDefault();
+  if (input.value === '') return;
   const li = document.createElement('li');
   li.classList.add('list__item');
 
@@ -9,7 +16,7 @@ function addTasks(tasks) {
 
   const taskSpan = document.createElement('span');
   taskSpan.classList.add('list__item-description');
-  taskSpan.textContent = 'pending...';
+  taskSpan.textContent = input.value;
   li.appendChild(taskSpan);
 
   const removeButton = document.createElement('button');
@@ -17,7 +24,8 @@ function addTasks(tasks) {
   removeButton.classList.add('remove-button');
   li.appendChild(removeButton);
 
-  return li;
-}
+  ul.appendChild(li);
 
-addButton.addEventListener('click', addTasks);
+  input.value = '';
+  removeButton.addEventListener('click', removeTask);
+}
