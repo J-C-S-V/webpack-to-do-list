@@ -17,6 +17,7 @@ export function addTasks(event) {
   const taskSpan = document.createElement('span');
   taskSpan.classList.add('list__item-description');
   taskSpan.textContent = input.value;
+  taskSpan.setAttribute('contenteditable', 'true');
   li.appendChild(taskSpan);
 
   const removeButton = document.createElement('button');
