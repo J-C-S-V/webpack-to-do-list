@@ -1,32 +1,32 @@
-import { removeTask } from './removeTasks.js';
+import removeTask from './removeTasks.js';
+import isCompleted from './isCompleted.js';
+
 const ul = document.querySelector('.main__ul');
 
-export function addTasks(event) {
-  /*What event.prevenDefault() 
-  does is prevent the default action of the event from happening.*/
+function addTasks(event) {
+  // What event.prevenDefault() does is prevent the default action of the event from happening.
   event.preventDefault();
   if (input.value === '') return;
   const li = document.createElement('li');
   li.classList.add('list__item');
 
-  const checkbox = document.createElement('input');
-  checkbox.type = 'checkbox';
-  checkbox.classList.add('list__item-checkbox');
-  li.appendChild(checkbox);
-
-  const taskSpan = document.createElement('span');
-  taskSpan.classList.add('list__item-description');
-  taskSpan.textContent = input.value;
-  taskSpan.setAttribute('contenteditable', 'true');
-  li.appendChild(taskSpan);
-
-  const removeButton = document.createElement('button');
-  removeButton.textContent = 'Remove';
-  removeButton.classList.add('remove-button');
-  li.appendChild(removeButton);
+  li.innerHTML = `
+    <input type="checkbox" class="list__item-checkbox">
+    <span class="list__item-description" contenteditable="true">${input.value}</span>
+    <button class="remove-button">Remove</button>
+  `;
 
   ul.appendChild(li);
 
   input.value = '';
-  removeButton.addEventListener('click', removeTask);
+
+  const removeButton = document.querySelectorAll('.remove-button');
+  removeButton.forEach((button) =>
+    button.addEventListener('click', removeTask)
+  );
+
+  const checkbox = document.querySelectorAll('.list__item-checkbox');
+  checkbox.forEach((box) => box.addEventListener('click', isCompleted));
 }
+
+export default addTasks;

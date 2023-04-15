@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server --open --mode development",
-    "deploy": "webpack --config webpack.config.prod.js && git add docs && git commit -m 'Deploy to GitHub Pages' && git push origin gh-pages"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
     "@babel/preset-env": "^7.20.2",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.0",
     "node-sass": "^8.0.0",
     "sass-loader": "^13.2.2",

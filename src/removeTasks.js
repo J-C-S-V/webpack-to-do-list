@@ -1,3 +1,5 @@
-export function removeTask(event) {
+function removeTask(event) {
   event.target.parentElement.remove();
 }
+
+export default removeTask;
