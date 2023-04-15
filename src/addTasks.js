@@ -1,5 +1,6 @@
 import removeTask from './removeTasks.js';
 import isCompleted from './isCompleted.js';
+import clearAllCompleted from './clearAllCompleted.js';
 
 const ul = document.querySelector('.main__ul');
 
@@ -27,6 +28,9 @@ function addTasks(event) {
 
   const checkbox = document.querySelectorAll('.list__item-checkbox');
   checkbox.forEach((box) => box.addEventListener('click', isCompleted));
+
+  const clearAllButton = document.querySelector('.main__anchor');
+  clearAllButton.addEventListener('click', clearAllCompleted);
 }
 
 export default addTasks;
