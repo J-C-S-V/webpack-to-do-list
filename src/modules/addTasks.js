@@ -3,6 +3,7 @@ import isCompleted from './isCompleted.js';
 import clearAllCompleted from './clearAllCompleted.js';
 
 const ul = document.querySelector('.main__ul');
+const input = document.querySelector('.main__input');
 
 function addTasks(event) {
   // What event.prevenDefault() does is prevent the default action of the event from happening.
@@ -22,9 +23,7 @@ function addTasks(event) {
   input.value = '';
 
   const removeButton = document.querySelectorAll('.remove-button');
-  removeButton.forEach((button) =>
-    button.addEventListener('click', removeTask)
-  );
+  removeButton.forEach((button) => button.addEventListener('click', removeTask));
 
   const checkbox = document.querySelectorAll('.list__item-checkbox');
   checkbox.forEach((box) => box.addEventListener('click', isCompleted));
