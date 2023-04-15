@@ -43,10 +43,6 @@ body {
   border: none;
 }
 
-.ul_li:not(:last-child) {
-  border-bottom: 1px solid grey;
-}
-
 .main__elements {
   border-bottom: 1px solid rgba(0, 0, 0, 0.511);
   padding: 10px 1rem;
@@ -86,4 +82,9 @@ body {
 
 .completed {
   text-decoration: line-through;
+}
+
+.list__item-description {
+  padding: 0 30px 0 10px;
+  line-height: 3.7rem;
 }

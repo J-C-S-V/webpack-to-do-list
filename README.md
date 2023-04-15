@@ -1,13 +1,9 @@
 <div align="center">
-  <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="./main_img.png" alt="logo" width="340"  height="auto" />
-  <br/>
-
-
+  <img src="./main_img.png" alt="logo" width="340"  height="auto" /><br/>
 </div>
 
-# [To do list]
-This is a project to create lists for a day, week or month. This was build using SPA (Single Page Application), JavaScript, HTML5, CSS3, mobile-first approach. local storage API and DOM manipulation.
+# To do list
+
 
 <!-- TABLE OF CONTENTS -->
 
@@ -23,8 +19,6 @@ This is a project to create lists for a day, week or month. This was build using
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#run-tests)
 - [👷‍♂️ Author](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -33,10 +27,9 @@ This is a project to create lists for a day, week or month. This was build using
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
+# 📖 To do list <a name="about-project"></a>
 
-# 📖 [To do list] <a name="about-project"></a>
-
-**[To do list]** is my project to keep track of your daily tasks 😀.
+This is a project to create lists for a day, week or month. This was build using SPA (Single Page Application), JavaScript, HTML5, CSS3, mobile-first approach. local storage API and DOM manipulation.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -45,15 +38,18 @@ This is a project to create lists for a day, week or month. This was build using
 <details>
   <summary>Languages and technologies</summary>
   <ul>
+    <li><a href="#">JavaScript</a></li>
+  </ul>
+    <ul>
+    <li><a href="#">Webpack</a></li>
+  </ul>
+    <ul>
     <li><a href="#">HTML</a></li>
   </ul>
     <ul>
     <li><a href="#">CSS3</a></li>
   </ul>
-    <ul>
-    <li><a href="#">JavaScript</a></li>
-  </ul>
-    <ul>
+   <ul>
     <li><a href="#">Git and GitHub</a></li>
   </ul>
 </details>
@@ -72,7 +68,7 @@ This is a project to create lists for a day, week or month. This was build using
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://j-c-s-v.github.io/webpack-to-do-list-/)
+- [Live Demo Link](https://j-c-s-v.github.io/webpack-to-do-list/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,33 +87,17 @@ To run this project use `npm start` or `npm run build`.
 
 Clone this repository to your desired folder:
 
-https
-cd my-folder
-git clone https://github.com/J-C-S-V/webpack-to-do-list-
+`git clone` https://github.com/J-C-S-V/webpack-to-do-list-
 
 ### Install
 
-Install this project with:
-
-N/A
+`npm install`
 
 ### Usage
 
-To run the project, execute the following command: `npm start` or `npm run build`
+`npm run build`
 
-N/A
-
-### Run tests
-
-N/A
-
-### Deployment
-
-You can deploy this project using:
-
-GitHub pages
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+`npm run start`
 
 <!-- AUTHORS -->
 
@@ -125,9 +105,9 @@ GitHub pages
 
 👷‍♂️ **Juan Sanchez**
 
-- GitHub: [@githubhandle](https://github.com/J-C-S-V)
-- Twitter: [@twitterhandle](https://twitter.com/juansan0)
-- LinkedIn: [@LinkedIn](https://www.linkedin.com/in/juan-carlos-sanchez-vargas-a308b014b/)
+- GitHub: [Juan Sanchez](https://github.com/J-C-S-V)
+- Twitter: [Juan Sanchez](https://twitter.com/juansan0)
+- LinkedIn: [Juan Sanchez](https://www.linkedin.com/in/juan-carlos-sanchez-vargas-a308b014b/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -137,7 +117,7 @@ GitHub pages
 
 - [ ] **[Payment]**
 - [ ] **[Footer]**
-- [ ] **[Profile picture]**
+- [ ] **[API integration]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
