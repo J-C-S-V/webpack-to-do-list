@@ -1,3 +1,8 @@
+$primary-white: #fff;
+$primary-grey: #545862;
+$primary-blue: #2e8ae6;
+$primary-yellow: rgba(210, 210, 149, 0.678);
+
 *,
 *::before,
 *::after {
@@ -13,20 +18,21 @@ html {
 body {
   font-size: 2rem;
   font-family: system-ui, BlinkMacSystemFont, 'Segoe UI';
-  background-color: #2e8ae6;
+  background-color: $primary-blue;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  margin: 20% 15%;
-  background-color: white;
+  margin: 10%;
+  margin-bottom: 0;
+  background-color: $primary-white;
   box-shadow: 1px 18px 13px 1px rgba(0, 0, 0, 0.3);
 }
 
 .main__h2 {
   font-size: 2rem;
-  color: #545862;
+  color: $primary-grey;
 }
 
 .list {
@@ -51,7 +57,6 @@ body {
 
 .main__anchor {
   text-align: center;
-  background-color: #f6f6f6;
   text-decoration: none;
   padding: 2rem;
   color: #545862;
@@ -71,8 +76,8 @@ body {
 
 .main__button,
 .remove-button {
-  background-color: #2e8ae6;
-  color: white;
+  background-color: $primary-blue;
+  color: $primary-white;
   border: none;
   padding: 1rem;
   font-size: 1.5rem;
@@ -85,6 +90,12 @@ body {
 }
 
 .list__item-description {
-  padding: 0 30px 0 10px;
+  padding: 0 10px;
+  width: 60%;
   line-height: 3.7rem;
+}
+
+.list__item-description:hover,
+.list__item-description:focus {
+  background-color: $primary-yellow;
 }
