@@ -2,14 +2,15 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js', // Define your entry point
+  mode: 'development',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [
       {
-        test: /\.js$/, // Use the babel-loader to transpile JavaScript code
+        test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -21,16 +22,15 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          'style-loader', // creates style nodes from JS strings
-          'css-loader', // translates CSS into CommonJS
-          'sass-loader', // compiles Sass to CSS
+          'style-loader',
+          'css-loader',
+          'sass-loader',
         ],
       },
     ],
   },
   plugins: [
     new HtmlWebpackPlugin({
-      // Use the html-webpack-plugin to generate an HTML file
       template: './src/index.html',
     }),
   ],
