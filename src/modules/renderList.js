@@ -4,7 +4,6 @@ import isCompleted from './isCompleted.js';
 const renderList = () => {
   const ul = document.querySelector('.main__ul');
   const tasks = (JSON.parse(localStorage.getItem('tasks'))) || [];
-  console.log('new', tasks);
   tasks.forEach((element) => {
     const li = document.createElement('li');
     li.classList.add('list__item');
