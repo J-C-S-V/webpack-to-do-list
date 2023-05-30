@@ -5,10 +5,21 @@ import clearAllCompleted from './clearAllCompleted.js';
 const ul = document.querySelector('.main__ul');
 const input = document.querySelector('.main__input');
 
+// export const tasks = Array.from(JSON.parse(localStorage.getItem('tasks'))) || [];
+export const tasks = [];
+
+let number = 1;
+
 function addTasks(event) {
-  // What event.prevenDefault() does is prevent the default action of the event from happening.
   event.preventDefault();
+  const taskObject = {
+    index: number,
+    description: input.value,
+    completed: false,
+  };
+  number += 1;
   if (input.value === '') return;
+
   const li = document.createElement('li');
   li.classList.add('list__item');
 
@@ -30,6 +41,13 @@ function addTasks(event) {
 
   const clearAllButton = document.querySelector('.main__anchor');
   clearAllButton.addEventListener('click', clearAllCompleted);
+
+  tasks.push(taskObject);
+
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+  // const local = JSON.parse(localStorage.getItem('tasks'));
+  // console.log(local);
+  // localStorage.getItem('tasks', JSON.stringify(tasks));
 }
 
 export default addTasks;

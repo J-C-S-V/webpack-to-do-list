@@ -1,5 +1,6 @@
 function removeTask(event) {
-  event.target.parentElement.remove();
+  const li = event.target.parentElement;
+  li.remove();
 }
 
 export default removeTask;
