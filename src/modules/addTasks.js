@@ -8,10 +8,9 @@ renderList();
 const ul = document.querySelector('.main__ul');
 const input = document.querySelector('.main__input');
 
-export const tasks = (JSON.parse(localStorage.getItem('tasks'))) || [];
-
 let number = 0;
 
+const tasks = (JSON.parse(localStorage.getItem('tasks'))) || [];
 function addTasks(event) {
   event.preventDefault();
   const taskObject = {

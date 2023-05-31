@@ -8,6 +8,9 @@ function clearAllCompleted() {
   completedItems.forEach((item) => {
     item.remove();
   });
+  tasks.forEach((task, index) => {
+    task.index = index;
+  });
 }
 
 export default clearAllCompleted;
