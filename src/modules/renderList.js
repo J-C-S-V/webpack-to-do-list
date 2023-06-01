@@ -2,7 +2,7 @@ import removeTask from './removeTasks.js';
 import isCompleted from './isCompleted.js';
 import clearAllCompleted from './clearAllCompleted.js';
 
-const renderList = () => {
+function renderList() {
   const ul = document.querySelector('.main__ul');
   const tasks = (JSON.parse(localStorage.getItem('tasks'))) || [];
   tasks.forEach((element) => {
@@ -25,6 +25,6 @@ const renderList = () => {
     const clearAllButton = document.querySelectorAll('.main__anchor');
     clearAllButton.forEach((item) => item.addEventListener('click', clearAllCompleted));
   });
-};
+}
 
 export default renderList;

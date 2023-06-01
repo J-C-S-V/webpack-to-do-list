@@ -14,5 +14,3 @@ function clearAllCompleted() {
 }
 
 export default clearAllCompleted;
-
-// Test commit history

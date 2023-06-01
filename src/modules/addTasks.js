@@ -10,8 +10,8 @@ const input = document.querySelector('.main__input');
 
 let number = 0;
 
-const tasks = (JSON.parse(localStorage.getItem('tasks'))) || [];
 function addTasks(event) {
+  const tasks = (JSON.parse(localStorage.getItem('tasks'))) || [];
   event.preventDefault();
   const taskObject = {
     index: number,
@@ -40,6 +40,10 @@ function addTasks(event) {
   clearAllButton.addEventListener('click', clearAllCompleted);
 
   tasks.push(taskObject);
+
+  tasks.forEach((task, index) => {
+    task.index = index;
+  });
 
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
