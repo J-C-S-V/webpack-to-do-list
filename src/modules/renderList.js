@@ -1,6 +1,7 @@
 import removeTask from './removeTasks.js';
 import isCompleted from './isCompleted.js';
 import clearAllCompleted from './clearAllCompleted.js';
+import updateLocalStorage from './updateLocalStorage.js';
 
 function renderList() {
   const ul = document.querySelector('.main__ul');
@@ -24,6 +25,10 @@ function renderList() {
     checkbox.forEach((box) => box.addEventListener('click', isCompleted));
     const clearAllButton = document.querySelectorAll('.main__anchor');
     clearAllButton.forEach((item) => item.addEventListener('click', clearAllCompleted));
+    const descriptionSpan = document.querySelectorAll('.list__item-description');
+    descriptionSpan.forEach((item) => {
+      item.addEventListener('input', updateLocalStorage);
+    });
   });
 }
 

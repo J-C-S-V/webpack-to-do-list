@@ -2,6 +2,7 @@ import removeTask from './removeTasks.js';
 import isCompleted from './isCompleted.js';
 import renderList from './renderList.js';
 import clearAllCompleted from './clearAllCompleted.js';
+import updateLocalStorage from './updateLocalStorage.js';
 
 renderList();
 
@@ -38,6 +39,10 @@ function addTasks(event) {
   checkbox.forEach((box) => box.addEventListener('click', isCompleted));
   const clearAllButton = document.querySelector('.main__anchor');
   clearAllButton.addEventListener('click', clearAllCompleted);
+  const descriptionSpan = document.querySelectorAll('.list__item-description');
+  descriptionSpan.forEach((item) => {
+    item.addEventListener('input', updateLocalStorage);
+  });
 
   tasks.push(taskObject);
 
