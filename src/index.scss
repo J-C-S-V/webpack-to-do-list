@@ -1,7 +1,7 @@
 $primary-white: #fff;
 $primary-grey: #545862;
+$secondary-grey: rgba(220, 220, 220, 0.678);
 $primary-blue: #2e8ae6;
-$primary-yellow: rgba(210, 210, 149, 0.678);
 
 *,
 *::before,
@@ -19,21 +19,18 @@ body {
   font-size: 2rem;
   font-family: system-ui, BlinkMacSystemFont, 'Segoe UI';
   background-color: $primary-blue;
+  display: flex;
+  justify-content: center;
 }
 
 .main {
   display: flex;
   flex-direction: column;
-  margin: 10%;
-  margin-bottom: 0;
+  margin-top: 5rem;
   background-color: $primary-white;
   box-shadow: 1px 18px 13px 1px rgba(0, 0, 0, 0.3);
 }
 
-.main__h2 {
-  font-size: 2rem;
-  color: $primary-grey;
-}
 
 .list {
   list-style: none;
@@ -53,6 +50,11 @@ body {
   border-bottom: 1px solid rgba(0, 0, 0, 0.511);
   padding: 10px 1rem;
   font-weight: 100;
+}
+
+.main__h2 {
+  color: $primary-grey;
+  text-align: center;
 }
 
 .main__anchor {
@@ -97,5 +99,19 @@ body {
 
 .list__item-description:hover,
 .list__item-description:focus {
-  background-color: $primary-yellow;
+  background-color: $secondary-grey;
+}
+
+.drag {
+  display: flex;
+  align-items: center;
+  cursor: grab;
+}
+
+@media (min-width: 768px) {
+  
+  .main {
+    width: 50%;
+  }
+
 }
